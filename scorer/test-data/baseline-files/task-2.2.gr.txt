@@ -1,0 +1,5 @@
+#20466020 24 drop.NA price-:-22-:-nsubj
+#20141014 23 increase.NA income-:-21-:-nsubj
+#20036026 18 fall.NA order-:-4-:-nsubj %-:-20-:-dobj
+#21057052 8 begin.NA he-:-7-:-nsubj career-:-10-:-dobj
+#21120012 10 start.NA ldp-:-9-:-nsubj crumble-:-12-:-xcomp

@@ -1,0 +1,5 @@
+#20466020 24 drop.drop stock-:-21-:-null price-:-22-:-nsubj
+#20141014 23 increase.increase income-:-21-:-nsubj
+#20036026 18 fall.fall order-:-4-:-nsubj goods-:-7-:-null %-:-20-:-dobj $-:-24-:-nmod
+#21057052 8 begin.begin he-:-7-:-nsubj career-:-10-:-dobj
+#21120012 10 start.start ldp-:-9-:-nsubj crumble-:-12-:-xcomp
