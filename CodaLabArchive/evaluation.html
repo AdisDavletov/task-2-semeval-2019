@@ -1,0 +1,35 @@
+<h1>Task Description and Subtasks</h1>
+<p>Target verbs and their arguments (syntactic dependants) in a test set must be clustered into automatically-learned frame structures. The test set consists of approximately 5000 frames from 1000 randomly chosen sentences from the PTB 3.0. The organizers provide free evaluation access to the full PTB 3.0 (courtesy of LDC under the specified evaluation license).&nbsp;</p>
+<p>Since this is an unsupervised task, sentences are not annotated for frames. The chosen verbs in the sentences for testing will be revealed to participants at a later stage near to the evaluation period. The gold annotations for the test set will be revealed to participants only after the evaluation and submission periods.</p>
+<p>The assumed frame structures have a head and an arbitrary number of slots/roles. A verb lexicalizes the head of a frame and (some of) the verb's arguments are the slot fillers for the frame that the verb evokes. For the test set, the position of the target verbs and their argument are given (i.e., subcategorization frames are assumed a priori rather than being determined by systems).&nbsp;</p>
+<p><a href="#learn_the_details-datasets"><strong>Further instructions regarding obtaining the data and the format of files can be found in the&nbsp;Datesets&nbsp;tab.</strong></a></p>
+<p>Participants are allowed to use additional corpora and tools for training as long as these resources/tools do not contain or use explicit (supervised) semantic annotations regarding word senses, frame groupings, and semantic roles. For instance, while using a lexical semantic resource such as Princeton WordNet is not allowed, participants can (and are encouraged to use) WordNet-like lexical databases that are built automatically.</p>
+<p>Participants are invited to partake in one or more of the following subtasks:</p>
+<h2>Subtask 1: Grouping Verbs to Frame Type Clusters</h2>
+<p>For this subtask, participants are required to assign occurrences of the target verbs to a number of cluster, in such a way that verbs belonging to the same cluster evoke the same frame type. For instance, in the following examples:</p>
+<p style="padding-left: 30px;">a. Trump leads the world, backward.<br />b. Disrespecting international laws leads to many complications.<br />c. Rosenzweig heads the climate impacts section at NASA's Goddard Institute.</p>
+<p>we expect that the verbs `to lead' in ex. a and `to head' in ex. c end up in one cluster (e.g., call it Leadership after FrameNet) whereas `to lead' in ex. b will end up in another cluster (e.g., call it Cause) in which instances of verbs `originate', `produce', an so on (when they are used in the same sense) can be found. As exemplified above, the subtask 1 goes beyond the verb-sense induction task by requiring grouping of synonym, troponym, (even) antonym, ...&nbsp; senses of verbs together.&nbsp;</p>
+<p>Our annotations for this subtask will be based on FrameNet definitions, where it is covered.</p>
+<p>&nbsp;</p>
+<h2>Subtask 2.1: Clustering arguments of verbs to frame-specific slots</h2>
+<p>For this subtask, arguments of verbs must be grouped to a number of frame-specific slots similar to FrameNet. That is, we assume argument groupings are specific to frame types and that they are not necessarily shared with other frames. As a result, participating in Subtask 2.1 demands participation in Subtask 1 since evaluations of argument groupings are done per frame cluster. However, one could build frame specific slot-clusters by using a heuristic/assumption such as a frame per verb-form.</p>
+<p>&nbsp;</p>
+<h2>Subtask 2.2: Clustering arguments of verbs to generic roles</h2>
+<p>In contrast to subtask 2.1, here verb arguments are clustered into a set of generic roles that are defined independently of frame definitions. Hence, this subtask is very similar to unsupervised semantic role induction. Providing frame clustering (i.e., subtask 1) is not mandatory for this subtask and groupings of verbs arguments into latent semantic roles are evaluated disregarding the frames that the verbs belong to.</p>
+<p>&nbsp;</p>
+<h2>Evaluation Setting</h2>
+<p>The evaluation framework consists of a number of clustering evaluation measures. The induced groupings for frame types/slots/roles are evaluated as clusters of examples. These examples are compared to instances with the gold standard annotations. The scorer reports performance with respect to a range of evaluation metrics; however, for official ranking of systems we use</p>
+<ul>
+<li>Purity, inverse-Purity and their harmonic mean proposed by Stein-bach et al. (2000);&nbsp;</li>
+<li>and, the harmonic mean of BCubed's Precision and Recall proposed by Bagga and Baldwin (1998).</li>
+</ul>
+<p>The scorer program can be <a href="http://pars.ie/lr/semeval2019-task2/semeval-2019-task2-scorer.zip">downloaded from here</a>&nbsp;(also source codes&nbsp;<a href="https://github.com/languagerecipes/task-2-semeval-2019/tree/master/scorer">from Github</a>) and used in your local machine (requires Java 1.8).</p>
+<h2>&nbsp;</h2>
+<h2>Evaluation Baselines</h2>
+<p>For subtask 1, we report results from clusterings that are formed by the assumption that each verb-form evokes a frame (i.e., one frame per verb), assigning each verb-occurrence to a cluster (i.e., one cluster per instance), and&nbsp;grouping verbs to randomly generated clusters (i.e, random baseline). Additionally, we report an additional baseline measure using the method proposed by Kallmeyer e. al. (2018).</p>
+<p>For subtask 2.1 and 2.2, we use grouping verb arguments by the type of syntactic relations to the head verb,&nbsp; e.g., subjects form one cluster, objects from another cluster, and so on (i.e., one frame per syntactic category) as well as a random baseline.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

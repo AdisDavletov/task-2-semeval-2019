@@ -1,0 +1,259 @@
+<h1>Datasets&nbsp;</h1>
+<p>To obtain a valid license for the full test and training sets, participants must agree to <strong>"SemEval 2019 Task 2 Evaluation Agreement"</strong> as set by <strong>LDC</strong> to access the Penn Treebank 3.0 (PTB). In a nutshell, LDC's agreement states that 1) the data can only be used for the purpose of this shared task, and 2) that users' access to data is temporary and they must destroy the data at the completion of the shared task. Accepting this agreement is necessary since the test set is part of the PTB: a subset of 1000 sentences that are randomly chosen from the texts in the Wall Street Journal section of the PTB.</p>
+<p>&nbsp;</p>
+<h2>To obtain a valid license:</h2>
+<ul>
+<li><a href="http://pars.ie/lr/semeval2019-task2/semeval2019_task2_ldc_agreement.pdf">Download the SemEval 2019 Task 2 Evaluation Agreement (click on the hyperlink assigned to this text).</a></li>
+<li>Email a copy of the signed completed agreement to the LDC membership office&nbsp; <tt>ldc@ldc.upenn.edu</tt> with the shared task's organizers in cc <tt>shared-task-2-at-semeval-2019-organizers@googlegroups.com</tt>.</li>
+</ul>
+<p><br />once your request is processed by LDC, you will receive additional instructions from LDC (and the organizers) to obtain the data including a dev-set which contains gold annotations for 200 frames. Please note that obtaining the license from the LDC may take a few days.</p>
+<p>The full blind testing set will be available here later (around December and close to the evaluation period).</p>
+<p><a href="http://pars.ie/lr/semeval2019-task2/trial-public.zip"><strong>A&nbsp;</strong></a><span><a href="http://pars.ie/lr/semeval2019-task2/trial-public.zip"><strong>minimal example can be downloaded from here.</strong></a><br /></span></p>
+<p>&nbsp;</p>
+<h1><span><a name="dataset-format"></a>Data Format</span></h1>
+<p>Participants are provided with a CoNLL-U format of the tokenized and automatically-parsed (in the universal dependencies formalism) sentences in PTB 3.0. For instance, for the input sentence</p>
+<p style="padding-left: 30px;">Pierre Vinken, 61 years old, will join the board as a nonexecutive director Nov. 29.</p>
+<p>which appeared as the first sentence in <tt>wsj_0001</tt> section of PTB, <a href="http://universaldependencies.org/format.html">the CoNLL-U file</a> will contain the following record:</p>
+<p style="padding-left: 30px;">&nbsp;<tt>#20001001</tt></p>
+<table class="table" style="font-family: courier; height: 354px; width: 375px; font-size: 70%; padding-left: 30px;">
+<tbody style="padding-left: 30px;">
+<tr style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">1</td>
+<td class="_24W9q" style="padding-left: 30px;">Pierre</td>
+<td class="_24W9q" style="padding-left: 30px;">Pierre</td>
+<td class="_24W9q" style="padding-left: 30px;">PROPN</td>
+<td class="_24W9q" style="padding-left: 30px;">NNP</td>
+<td class="_24W9q" style="padding-left: 30px;">_</td>
+<td class="_24W9q" style="padding-left: 30px;" align="right">2</td>
+<td class="_24W9q" style="padding-left: 30px;">compound</td>
+<td class="_24W9q" style="padding-left: 30px;">_</td>
+<td class="_24W9q" style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">2</td>
+<td style="padding-left: 30px;">Vinken</td>
+<td style="padding-left: 30px;">Vinken</td>
+<td style="padding-left: 30px;">PROPN</td>
+<td style="padding-left: 30px;">NNP</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">nsubj</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">3</td>
+<td style="padding-left: 30px;">,</td>
+<td style="padding-left: 30px;">,</td>
+<td style="padding-left: 30px;">PUNCT</td>
+<td style="padding-left: 30px;">,</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">2</td>
+<td style="padding-left: 30px;">punct</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">4</td>
+<td style="padding-left: 30px;">61</td>
+<td style="padding-left: 30px;">61</td>
+<td style="padding-left: 30px;">NUM</td>
+<td style="padding-left: 30px;">CD</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">5</td>
+<td style="padding-left: 30px;">nummod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">5</td>
+<td style="padding-left: 30px;">years</td>
+<td style="padding-left: 30px;">year</td>
+<td style="padding-left: 30px;">NOUN</td>
+<td style="padding-left: 30px;">NNS</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">6</td>
+<td style="padding-left: 30px;">nmod:npmod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">6</td>
+<td style="padding-left: 30px;">old</td>
+<td style="padding-left: 30px;">old</td>
+<td style="padding-left: 30px;">ADJ</td>
+<td style="padding-left: 30px;">JJ</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">2</td>
+<td style="padding-left: 30px;">amod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">7</td>
+<td style="padding-left: 30px;">,</td>
+<td style="padding-left: 30px;">,</td>
+<td style="padding-left: 30px;">PUNCT</td>
+<td style="padding-left: 30px;">,</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">2</td>
+<td style="padding-left: 30px;">punct</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">8</td>
+<td style="padding-left: 30px;">will</td>
+<td style="padding-left: 30px;">will</td>
+<td style="padding-left: 30px;">AUX</td>
+<td style="padding-left: 30px;">MD</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">aux</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">join</td>
+<td style="padding-left: 30px;">join</td>
+<td style="padding-left: 30px;">VERB</td>
+<td style="padding-left: 30px;">VB</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">0</td>
+<td style="padding-left: 30px;">root</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">10</td>
+<td style="padding-left: 30px;">the</td>
+<td style="padding-left: 30px;">the</td>
+<td style="padding-left: 30px;">DET</td>
+<td style="padding-left: 30px;">DT</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">11</td>
+<td style="padding-left: 30px;">det</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">11</td>
+<td style="padding-left: 30px;">board</td>
+<td style="padding-left: 30px;">board</td>
+<td style="padding-left: 30px;">NOUN</td>
+<td style="padding-left: 30px;">NN</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">dobj</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">12</td>
+<td style="padding-left: 30px;">as</td>
+<td style="padding-left: 30px;">as</td>
+<td style="padding-left: 30px;">ADP</td>
+<td style="padding-left: 30px;">IN</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">15</td>
+<td style="padding-left: 30px;">case</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">13</td>
+<td style="padding-left: 30px;">a</td>
+<td style="padding-left: 30px;">a</td>
+<td style="padding-left: 30px;">DET</td>
+<td style="padding-left: 30px;">DT</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">15</td>
+<td style="padding-left: 30px;">det</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">14</td>
+<td style="padding-left: 30px;">nonexecutive</td>
+<td style="padding-left: 30px;">nonexecutive</td>
+<td style="padding-left: 30px;">ADJ</td>
+<td style="padding-left: 30px;">JJ</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">15</td>
+<td style="padding-left: 30px;">amod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">15</td>
+<td style="padding-left: 30px;">director</td>
+<td style="padding-left: 30px;">director</td>
+<td style="padding-left: 30px;">NOUN</td>
+<td style="padding-left: 30px;">NN</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">nmod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">16</td>
+<td style="padding-left: 30px;">Nov.</td>
+<td style="padding-left: 30px;">Nov.</td>
+<td style="padding-left: 30px;">PROPN</td>
+<td style="padding-left: 30px;">NNP</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">nmod:tmod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">17</td>
+<td style="padding-left: 30px;">29</td>
+<td style="padding-left: 30px;">29</td>
+<td style="padding-left: 30px;">NUM</td>
+<td style="padding-left: 30px;">CD</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">16</td>
+<td style="padding-left: 30px;">nummod</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+<tr class="_24W9q" style="padding-left: 30px;">
+<td style="padding-left: 30px;" align="right">18</td>
+<td style="padding-left: 30px;">.</td>
+<td style="padding-left: 30px;">.</td>
+<td style="padding-left: 30px;">PUNCT</td>
+<td style="padding-left: 30px;">.</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;" align="right">9</td>
+<td style="padding-left: 30px;">punct</td>
+<td style="padding-left: 30px;">_</td>
+<td style="padding-left: 30px;">_</td>
+</tr>
+</tbody>
+</table>
+<p>in which the first line (starts with <strong>#</strong>) denotes the identifier assigned to this sentence. These identifiers together with the assigned positions to the word forms (numbers in the first column)&nbsp;in the sentences are used to form evaluation instances. For example, for subtask 1, the following string:</p>
+<p style="padding-left: 30px;"><tt><strong>#20001001 9 join.Becoming-a-member</strong></tt></p>
+<p>states that the verb at position 9 (with the lemma `<tt>join</tt>') of the sentence assigned to id #20001001 evokes a frame of type <tt>Becoming-a-member</tt>; note the format we use to convey this information, i.e.:</p>
+<p style="padding-left: 30px;"><tt><strong>#sent-id position verb-lemma.ftype</strong></tt></p>
+<p>In a similar way, for subtask 1.1 we have the record:</p>
+<p style="padding-left: 30px;"><tt><strong>#20001001 9 </strong>join<strong>.Becoming-a-member vinken-:-2-:-New-member board-:-11-:-Group</strong><tt></tt></tt></p>
+<p>and for the subtaks 2.2 we have</p>
+<p style="padding-left: 30px;"><strong><tt><tt><tt>#20001001 9 join.Becoming-a-member vinken-:-2-:-Agent board-:-11-:-Patient</tt></tt></tt></strong></p>
+<p>(note the difference between the slot/role labels).&nbsp;Here, we assumed that the frame has two core arguments.</p>
+<p>As exemplified, for the subtasks 2.1 and 2.2, the records have the format:</p>
+<p style="padding-left: 30px;"><strong><tt>#sent-id position verb-lemma.{ftype} (word, position, slot-type)\supscript&lt;+&gt;</tt> </strong></p>
+<p>in which <tt>(word, position, slot-type)</tt> are delimited using the char-sequence of <strong><tt>-:-</tt></strong>.&nbsp;</p>
+<p>In the trial dataset, alongside the positional information that determines the shape of frames, the labels for frame types and slots/roles are provided, too. For the final testing set, labels that must be predicted by systems are replaced by the keyword <tt>UKN</tt>. For instance, the testing set for task 1 will look like:</p>
+<p style="padding-left: 30px;"><strong><tt>#20001001 9 join.UKN</tt></strong></p>
+<p>and for task 2.1:</p>
+<p style="padding-left: 30px;"><strong><tt>#20001001 9 join.UKN vinken-:-2-:-UKN board-:-11-:-UKN</tt></strong></p>
+<p>and for the subtask 2.2 we have</p>
+<p style="padding-left: 30px;"><strong><tt>#20001001 9 join.NA vinken-:-2-:-UKN board-:-11-:-UKN</tt></strong></p>
+<p>(Note that for subtask 2.2 the prediction of the frame type is not necessary).</p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<h1 style="padding-left: 30px;">Evaluation Scripts</h1>
+<p>The scorer program can be&nbsp;<a href="http://pars.ie/lr/semeval2019-task2/semeval-2019-task2-scorer.zip">downloaded from here</a>&nbsp;(also source codes&nbsp;<a href="https://github.com/languagerecipes/task-2-semeval-2019/tree/master/scorer">from Github</a>) and used in your local machine (requires Java 1.8).</p>

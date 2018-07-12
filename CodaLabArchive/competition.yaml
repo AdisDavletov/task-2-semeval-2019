@@ -1,0 +1,63 @@
+title: SemEval 2019 Task 2
+description: Unsupervised Lexical Semantic Frame Induction
+start_date: 2018-06-30 00:00:00+00:00
+end_date: null
+competition_docker_image: ''
+image: logo.png
+has_registration: true
+force_submission_to_leaderboard: true
+disallow_leaderboard_modifying: false
+enable_detailed_results: false
+admin_names: alfredo,behqas
+html:
+  Datasets: Datasets.html
+  evaluation: evaluation.html
+  overview: overview.html
+phases:
+  0:
+    auto_migration: false
+    color: yellow
+    description: 'Subtask 1: grouping verbs to frame clusters'
+    is_scoring_only: false
+    label: 'Trial subtask 1: grouping verbs to frame'
+    max_submissions: 999
+    max_submissions_per_day: 999
+    phasenumber: 0
+    reference_data: reference_data_0.zip
+    scoring_program: scoring_program_0.zip
+    start_date: 2018-06-30 00:00:00+00:00
+  1:
+    auto_migration: false
+    color: green
+    description: 'Subtask 2.1: grouping roles to frame specific slots'
+    is_scoring_only: false
+    label: Trial Subtask 2.1 -- frame specific role
+    max_submissions: 999
+    max_submissions_per_day: 999
+    phasenumber: 1
+    reference_data: reference_data_1.zip
+    scoring_program: scoring_program_1.zip
+    start_date: 2018-06-30 00:00:00+00:00
+  2:
+    auto_migration: false
+    color: blue
+    description: Subtask 2.2 -- induction of semantic roles
+    is_scoring_only: true
+    label: Trial Subtask 2.2 -- generic role induction
+    max_submissions: 999
+    max_submissions_per_day: 999
+    phasenumber: 2
+    reference_data: reference_data_2.zip
+    scoring_program: scoring_program_2.zip
+    start_date: 2018-06-30 00:00:00+00:00
+leaderboard:
+  columns:
+    bcubed-f1:
+      label: bcubed-f1
+      leaderboard: &id001
+        label: Results
+        rank: 1
+      rank: 1
+      sort: desc
+  leaderboards:
+    Results: *id001
